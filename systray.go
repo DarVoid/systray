@@ -63,6 +63,7 @@ func (item *MenuItem) RemoveSelf() {
 		item.RemoveChildren()
 	}
 	item.parent = nil
+
 	deleteMenuItem(item)
 }
 
