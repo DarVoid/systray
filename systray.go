@@ -57,12 +57,18 @@ func (item *MenuItem) GetChildren() []*MenuItem {
 	return item.children
 }
 
+// GetParent returns parent of a MenuItem
+func (item *MenuItem) GetParent() *MenuItem {
+	return item.parent
+}
+
 // RemoveSelf removes itself and its children recursively
 func (item *MenuItem) RemoveSelf() {
 	if len(item.children) > 0 {
 		item.RemoveChildren()
 	}
 	item.parent = nil
+
 	deleteMenuItem(item)
 }
 

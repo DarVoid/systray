@@ -638,8 +638,8 @@ func (t *winTray) hideMenuItem(menuItemId, parentId uint32) error {
 	return nil
 }
 
-func (t *winTray) deleteMenuItem(menuItemId, parentId uint32) error {
-	return hideMenuItem(menuItemId, parentId)
+func deleteMenuItem(menuItem *MenuItem) {
+	hideMenuItem(menuItem)
 }
 
 func (t *winTray) showMenu() error {
